@@ -1,12 +1,12 @@
-const express = require('express')
+const express = require('express');
 const {
     readShoppingListOf,
     saveShoppingListFor,
-    updateShopingListFor,
+    updateShoppingListFor,
     removeShoppingListEntryFor,
 } = require('../fs-json@1.0.0')
-
-const router = express.Router()
+// Uebung 12 aus Kap. 5 WE
+const router = express.Router();
 
 router.get('/:id', (req, res, next) => {
     const { id } = req.params
@@ -16,13 +16,13 @@ router.get('/:id', (req, res, next) => {
 router.post('/', (req, res, next) => {
     const { id, list } = req.body
     saveShoppingListFor(id, list)
-    res.send(`Saved new shopping list for User ${id} successfully!`)
+    res.send(`Saved new shopping list for user ${id} successfully!`)
 })
 
 router.put('/', (req, res, next) => {
     const { id, list } = req.body
-    updateShopingListFor(id, list)
-    res.send(`Updated shopping list for User ${id} successfully!`)
+    updateShoppingListFor(id, list)
+    res.send(`Saved new shopping list for user ${id} successfully!`)
 })
 
 router.delete('/:id', (req, res, next) => {
@@ -37,4 +37,5 @@ router.delete('/:id/:entry', (req, res, next) => {
     res.send(`Removed ${entry} from User ${id}'s shopping list successfully!`)
 })
 
-module.exports = router
+
+module.exports = router;
