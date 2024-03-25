@@ -99,7 +99,7 @@ router.delete('/:id/:entryName', async (req, res) => {
         return
     }
 
-    const entryId = shoppingList.entries.filter(({ food }) => food === entryName.toLowerCase())[0]?.id
+    const entryId = shoppingList.entries.filter(({ what_to_buy }) => what_to_buy === entryName.toLowerCase())[0]?.id
 
     if (!entryId) {
         res.status(404).json({ error: 'The element does not exist.' })
@@ -134,7 +134,7 @@ async function createEntries(list) {
 
     try {
         for (const element of list.split(',').map((elem) => elem.trim())) {
-            const entry = await ShoppingListEntry.create({ food: element })
+            const entry = await ShoppingListEntry.create({ what_to_buy: element })
             entries.push(entry._id)
         }
     } catch ({ message }) {
@@ -150,7 +150,7 @@ async function addEntriesToShoppingList(entriyIds, shoppinglist) {
 }
 
 function shortenEntries(entries) {
-    return entries.map((entry) => (entry = { food: entry.food, createdAt: entry.createdAt }))
+    return entries.map((entry) => (entry = { what_to_buy: entry.what_to_buy, createdAt: entry.createdAt }))
 }
 
 async function resetEntriesOfList(shoppingList) {
