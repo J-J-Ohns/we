@@ -1,6 +1,6 @@
 const express = require('express');
-const ShoppingList = require('../models/shoppingList1');
-const ShoppingListEntry = require('../models/shoppingListEntry1');
+const ShoppingList = require('../../models/shoppingList1');
+const ShoppingListEntry = require('../../models/shoppingListEntry1');
  
 const router = express.Router()
  

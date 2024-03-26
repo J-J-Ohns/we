@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+        <title>Title</title>
+	</head>
+	<body class="flex justify-center p-8 bg-gray-50">
+		<div class="max-w-4xl w-full rounded-lg shadow-lg p-8 h-min">
+			<div class="md:flex md:items-center md:justify-between mb-16">
+                <div class="min-w-0 flex-1">
+                    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                        Shopping Lists
+                    </h2>
+                </div>
+                <div class="mt-4 flex md:mt-0 md:ml-4 space-x-4">
+                    <a
+                        href="#"
+                        class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm bg-red-500 hover:bg-red-600 text-white focus:outline-none"
+                        id="Logout"
+                    >
+                        Logout
+                    </a>
+                </div>
+            </div>
+			<div class="space-y-4">
+				<h3 class="text-2xl text-center text-slate-600">Create a new shopping list</h3>
+				<form class="space-y-4">
+					<div class="-m-0.5 rounded-lg p-0.5">
+						<div>
+							<textarea
+								rows="5"
+								name="list"
+								id="list"
+								class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+								placeholder="list items separated by commas. For example: Cheese, Bread, Water, ..."
+								required
+							></textarea>
+						</div>
+					</div>
+					<div class="flex justify-end">
+                        <div class="flex flex-row space-x-4">
+                            <a
+                                href="/"
+                                class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm focus:outline-none"
+                                id="Cancel"
+                            >
+                                Cancel
+                            </a>
+                            <button
+                                type="submit"
+                                class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm bg-indigo-600 hover:bg-indigo-700 text-white focus:outline-none"
+                            >
+                                Save
+                            </button>
+                        </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
