@@ -1,114 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-        <title>Title</title>
+        <%- include(`${root}/views/partials/head`, { title: 'Shopping Lists - Dashboard' }) %>
 	</head>
 	<body class="flex justify-center p-8 bg-gray-50">
 		<div class="max-w-4xl w-full p-8">
-			<div class="md:flex md:items-center md:justify-between mb-16">
-                <div class="min-w-0 flex-1">
-                    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                        Shopping Lists
-                    </h2>
-                </div>
-                <div class="mt-4 flex md:mt-0 md:ml-4 space-x-4">
-                    <a
-                        href="/addList"
-                        class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm bg-white hover:bg-gray-50 text-gray-700 focus:outline-none"
-                        id="Add"
-                    >
-                        Add
-                    </a>
-                    <a
-                        href="#"
-                        class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm bg-red-500 hover:bg-red-600 text-white focus:outline-none"
-                        id="Logout"
-                    >
-                        Logout
-                    </a>
-                </div>
-            </div>
-            <div class="rounded-lg shadow p-4 flex flex-col max-w-md  space-y-8">
-                <h3 class="text-xl font-semibold text-slate-600">My List</h3>
-
-                <ul class="divide-y divide-gray-200">
-                    <li class="py-4">
-                        <div class="flex items-center space-x-12">
-                            <div class="min-w-0 flex-1">
-                                <p class="truncate text-sm font-medium text-gray-900">Shopping List Entry</p>
-                            </div>
-                            <div>
-                                <a
-                                    href="#"
-                                    class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm rounded-full bg-white px-2.5 py-0.5 text-sm leading-5 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
-                                    id="X"
-                                >
-                                    X
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="py-4">
-                        <div class="flex items-center space-x-12">
-                            <div class="min-w-0 flex-1">
-                                <p class="truncate text-sm font-medium text-gray-900">Shopping List Entry</p>
-                            </div>
-                            <div>
-                                <a
-                                    href="#"
-                                    class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm rounded-full bg-white px-2.5 py-0.5 text-sm leading-5 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
-                                    id="X"
-                                >
-                                    X
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="py-4">
-                        <div class="flex items-center space-x-12">
-                            <div class="min-w-0 flex-1">
-                                <p class="truncate text-sm font-medium text-gray-900">Shopping List Entry</p>
-                            </div>
-                            <div>
-                                <a
-                                    href="#"
-                                    class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm rounded-full bg-white px-2.5 py-0.5 text-sm leading-5 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
-                                    id="X"
-                                >
-                                    X
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="py-4">
-                        <div class="flex items-center space-x-12">
-                            <div class="min-w-0 flex-1">
-                                <p class="truncate text-sm font-medium text-gray-900">Shopping List Entry</p>
-                            </div>
-                            <div>
-                                <a
-                                    href="#"
-                                    class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm rounded-full bg-white px-2.5 py-0.5 text-sm leading-5 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
-                                    id="X"
-                                >
-                                    X
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <a
-                    href="#"
-                    class="inline-flex items-center rounded-md border border-gray-30 px-4 py-2 text-sm font-medium shadow-sm bg-red-500 hover:bg-red-600 text-white w-full justify-center hover:bg-gray-50 focus:outline-none"
-                    id="Delete"
-                >
-                    Delete
-                </a>
-            </div>
+			<%- include(`${root}/views/partials/navbar`) %>
+        </div>
+        <div class="rounded-lg shadow p-4 flex flex-col max-w-md  space-y-8">
+            <%- include(`${root}/views/partials/shoppingList`) %>
 		</div>
 	</body>
 </html>
